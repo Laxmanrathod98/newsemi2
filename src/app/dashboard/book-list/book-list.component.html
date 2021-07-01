@@ -1,16 +1,3 @@
-<div class="navigation-bar">
-    <mat-card>
-        <mat-grid-list cols="4" rowHeight="30px">
-            <mat-grid-tile colspan="1">
-                <mat-grid-tile colspan="1"></mat-grid-tile>
-                <h2>Shop</h2>
-            </mat-grid-tile>
-            <mat-grid-tile colapan="1">Home > Electronics > Cameras > Build Your DSLR</mat-grid-tile>
-            <mat-grid-tile colspan="1"></mat-grid-tile>
-        </mat-grid-list>
-    </mat-card>
-</div>
-<br />
 <div class="container">
     <div class="errorPage" *ngIf="books.length === 0">
         <div class="errorMessage" *ngIf="error">
@@ -20,20 +7,10 @@
     </div>
     <div class="page" *ngIf="books.length !== 0">
         <mat-grid-list cols="5" rowHeight="40px">
-            <mat-grid-tile colspan="2"
-                ><span class="paginator-range-label">Showing {{ lowValue + 1 }} – {{ highValue }} of {{ books.length }} results</span></mat-grid-tile
-            >
+            <mat-grid-tile colspan="2"><span class="paginator-range-label">Showing {{ lowValue + 1 }} – {{ highValue }}
+                    of {{ books.length }} results</span></mat-grid-tile>
             <mat-grid-tile colspan="1"></mat-grid-tile>
             <mat-grid-tile colspan="1">
-                <div class="apps-list-button">
-                    <button>
-                        <mat-icon>apps</mat-icon>
-                    </button>
-                    <button disabled>
-                        <mat-icon>list</mat-icon>
-                    </button>
-                </div>
-
                 <mat-grid-tile colspan="1"></mat-grid-tile>
             </mat-grid-tile>
         </mat-grid-list>
@@ -48,25 +25,13 @@
         <div class="paginator-outer-container">
             <div class="paginator-container">
                 <div class="mat-paginator-range-actions" *ngIf="books.length > 12">
-                    <button
-                        mat-raised
-                        button
-                        type="button"
-                        class="page-buttons mat-paginator-navigation-previous"
-                        (click)="changePage(1, -1)"
-                        [disabled]="true ? lowValue === 0 : false"
-                    >
-                        Prev</button
-                    ><button mat-raised button type="button" class="page-buttons" *ngFor="let button of buttons" (click)="changePage(0, button)">
-                        {{ button }}</button
-                    ><button
-                        mat-raised
-                        button
-                        type="button"
-                        class="page-buttons mat-paginator-navigation-next"
-                        (click)="changePage(1, 1)"
-                        [disabled]="true ? highValue >= books.length : false"
-                    >
+                    <button mat-raised button type="button" class="page-buttons mat-paginator-navigation-previous"
+                        (click)="changePage(1, -1)" [disabled]="true ? lowValue === 0 : false">
+                        Prev</button><button mat-raised button type="button" class="page-buttons"
+                        *ngFor="let button of buttons" (click)="changePage(0, button)">
+                        {{ button }}</button><button mat-raised button type="button"
+                        class="page-buttons mat-paginator-navigation-next" (click)="changePage(1, 1)"
+                        [disabled]="true ? highValue >= books.length : false">
                         Next
                     </button>
                 </div>

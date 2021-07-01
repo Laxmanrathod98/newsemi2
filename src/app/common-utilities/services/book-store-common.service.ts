@@ -69,7 +69,7 @@ export class BookStoreCommonService {
      * @returns login response from backend
      */
     login(user: User): Observable<LoginResponse> {
-        return this.httpClient.post<LoginResponse>(`/api/user/login`, user);
+        return this.httpClient.post<LoginResponse>(`http://localhost:5000/api/user/login`, user);
     }
 
     /**
