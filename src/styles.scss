@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/allimports";
+
+@import "assets/scss/global";
+
+.error.mat-snack-bar-container {
+    background-color: map-get($colors, "background", "red-light");
+    color: map-get($colors, "background", "white");
+    margin-top: toREM(135px);
+}

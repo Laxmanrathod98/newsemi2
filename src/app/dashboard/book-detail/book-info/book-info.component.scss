@@ -1,0 +1,83 @@
+@import "../../../../assets/scss/allimports";
+
+.book-detail-grid {
+    border-bottom: toREM(1px) solid map-get($colors, "text", "black-light");
+    .image {
+        border-right: toREM(1px) solid map-get($colors, "text", "black-light");
+    }
+    .mat-grid-tile {
+        img {
+            height: toREM(400px);
+            padding-right: toREM(90px);
+            margin-left: auto;
+        }
+
+        .detail {
+            max-width: toREM(600px);
+            margin-right: auto;
+            padding-left: toREM(50px);
+
+            .title {
+                font-size: toREM(25px);
+            }
+
+            .stars {
+                display: flex;
+                .mat-icon {
+                    font-size: toREM(15px);
+                    margin-top: toREM(5px);
+                }
+                .active-stars {
+                    color: map-get($colors, "text", "golden-yellow");
+                }
+                .inactive-stars {
+                    color: map-get($colors, "text", "grey");
+                }
+                p {
+                    font-size: toREM(13px);
+                    margin: map-get($spacers, 5) map-get($spacers, 10) map-get($spacers, 0) map-get($spacers, 0);
+                }
+                .rating,
+                .author,
+                .name {
+                    color: map-get($colors, "text", "brown-lighter");
+                }
+            }
+            .cost {
+                padding: map-get($spacers, 10) map-get($spacers, 0);
+                font-size: toREM(20px);
+            }
+            .format {
+                display: flex;
+                .book-format {
+                    font-weight: 600;
+                    color: map-get($colors, "text", "brown-lighter");
+                    padding-right: map-get($spacers, 10);
+                }
+                .option {
+                    color: map-get($colors, "text", "brown-lighter");
+                }
+            }
+            .tabs {
+                max-width: toREM(550px);
+                .content {
+                    font-size: toREM(13px);
+                    padding-top: map-get($spacers, 20);
+                    padding-bottom: map-get($spacers, 20);
+                }
+            }
+            .button-row {
+                .cart-button {
+                    margin-left: map-get($spacers, 20);
+                    background-color: map-get($colors, "background", "black");
+                    color: map-get($colors, "text", "white");
+                }
+                .book-items {
+                    font-weight: 600;
+                    padding-right: map-get($spacers, 15);
+                    padding-left: map-get($spacers, 15);
+                }
+            }
+        }
+    }
+}

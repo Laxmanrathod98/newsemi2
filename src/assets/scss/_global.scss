@@ -1,0 +1,19 @@
+// The reset & global styling will be placed here.
+// A very careful approach has to be taken in the case of defining a value / styles as global
+
+@import "~normalize-scss/sass/normalize/import-now";
+
+html,
+body {
+    line-height: 1.375;
+}
+
+html {
+    font-size: $base-font-size;
+}
+
+body {
+    margin: 0;
+    font-family: $primary-font-face, $fallback-font-face;
+    color: map-get($colors, "text", "black-light");
+}

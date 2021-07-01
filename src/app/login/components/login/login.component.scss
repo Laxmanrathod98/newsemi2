@@ -1,0 +1,24 @@
+@import "../../../../assets/scss/allimports";
+
+.login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-logo {
+    margin: map-get($spacers, 50) map-get($spacers, 0);
+    width: toREM(170px);
+    height: toREM(30px);
+}
+.login-form {
+    margin-top: map-get($spacers, 30);
+}
+mat-form-field {
+    width: toREM(400px);
+}
+.login-submit button {
+    background-color: map-get($colors, "background", "black");
+    color: map-get($colors, "text", "white");
+    width: toREM(400px);
+    padding: map-get($spacers, 5);
+}

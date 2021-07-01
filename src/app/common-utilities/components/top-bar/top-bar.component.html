@@ -1,0 +1,9 @@
+<div class="head-container">
+    <span><mat-icon>help_outline</mat-icon></span>
+    <span class="span-right">Can we help you?</span>
+    <span><mat-icon>stay_primary_portrait</mat-icon></span>
+    <a href="tel:+1 246-345-0695">+1 246-345-0695</a>
+    <button mat-icon-button (click)="cart.toggle()" *ngIf="user === 0 ? false : true">
+        <mat-icon [matBadge]="cartItemsCount" matBadgeSize="small" matBadgePosition="before" class="bag">shopping_bag</mat-icon>
+    </button>
+</div>

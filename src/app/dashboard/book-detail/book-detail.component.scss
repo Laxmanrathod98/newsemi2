@@ -1,0 +1,7 @@
+@import "../../../assets/scss/allimports";
+
+.error {
+    justify-content: center;
+    text-align: center;
+    color: map-get($colors, "text", "red-light");
+}

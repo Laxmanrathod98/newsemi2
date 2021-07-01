@@ -1,0 +1,50 @@
+@import "../../../assets/scss/allimports";
+
+.container {
+    margin-top: map-get($spacers, 15);
+    .page {
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding-left: toREM(150px);
+            padding-right: toREM(300px);
+        }
+
+        .paginator-outer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .page-buttons {
+                margin: map-get($spacers, 5);
+                padding: map-get($spacers, 5);
+            }
+        }
+    }
+
+    .errorPage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .errorMessage {
+            color: red;
+        }
+    }
+}
+.navigation-bar {
+    margin-top: map-get($spacers, 10);
+    border: "0.5px solid lightgrey";
+}
+.apps-list-button {
+    margin-right: -110px;
+}
+
+.paginator-range-label {
+    // padding-left: toREM(150px);
+    margin-left: -40px;
+}
+.errorMessage {
+    justify-content: center;
+    text-align: center;
+    color: map-get($colors, text, red-light);
+}

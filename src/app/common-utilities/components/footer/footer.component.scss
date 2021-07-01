@@ -1,0 +1,11 @@
+@import "../../../../assets/scss/allimports";
+footer {
+    display: flex;
+    margin-left: map-get($spacers, 80);
+    margin-right: map-get($spacers, 80);
+}
+
+.image {
+    display: inline-block;
+    margin-left: auto;
+}

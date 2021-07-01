@@ -1,0 +1,42 @@
+export const featuredCategories = [
+    {
+        icon: "collections",
+        category_name: "Arts & Photography",
+        content: "Shop Now",
+        color_background: "#f2c0ff",
+        color_icon: "#ff69b4",
+        id: 1,
+    },
+    {
+        icon: "fastfood",
+        category_name: "Food & Drink",
+        content: "Shop Now",
+        color_background: "#ffd480",
+        color_icon: "#FFA500",
+        id: 2,
+    },
+    {
+        icon: "favorite",
+        category_name: "Romance",
+        content: "Shop Now",
+        color_background: "#ffcccb",
+        color_icon: "#ff4500",
+        id: 3,
+    },
+    {
+        icon: "health_and_safety",
+        category_name: "Health",
+        content: "Shop Now",
+        color_background: "#add8e6",
+        color_icon: "#0000FF",
+        id: 4,
+    },
+    {
+        icon: "description",
+        category_name: "Biography",
+        content: "Shop Now",
+        color_background: "#ffedcb",
+        color_icon: "#ff4500",
+        id: 5,
+    },
+];

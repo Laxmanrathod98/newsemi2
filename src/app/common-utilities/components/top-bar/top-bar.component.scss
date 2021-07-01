@@ -1,0 +1,28 @@
+@import "../../../../assets/scss/allimports";
+
+.head-container {
+    display: flex;
+    margin-left: map-get($spacers, 15);
+
+    span {
+        font-size: toREM(12px);
+
+        mat-icon {
+            font-size: toREM(15px);
+            margin-top: toREM(3px);
+        }
+    }
+
+    .span-right {
+        margin-right: toREM(20px);
+    }
+
+    button {
+        margin-left: auto;
+
+        .bag {
+            font-size: toREM(15px);
+            margin-top: map-get($spacers, 10);
+        }
+    }
+}

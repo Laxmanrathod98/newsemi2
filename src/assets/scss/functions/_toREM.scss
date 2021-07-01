@@ -1,0 +1,26 @@
+@import "strip-unit";
+
+// ---------------------------------------------------------
+// toREM
+// Convert number's pixel unit to rem
+//
+// Required arguments:
+// `$number` Number
+// `$unit` String *defaulted*
+// `$base` Number *defaulted*
+//
+// Example of use:
+// toREM(15px);
+//
+// ---------------------------------------------------------
+@function toREM($number, $unit: "rem", $base: $base-font-size) {
+    @if type-of($number) != "number" {
+        @error 'The argument $number: `#{$number}` is of incorrect type: `#{type-of($number)}`. Type of `Number` is required!';
+    } @else if unit($number) != "px" {
+        @error 'The argument $number: `#{$number}` has incorrect unit: `#{unit($number)}`. Unit of `px` is required!';
+    } @else if $unit != "em" and $unit != "rem" {
+        @error 'The argument $unit: `#{$unit}` has incorrect value: `#{$unit}`. Value of `em` or `rem` is required!';
+    }
+
+    @return strip-unit($number) / strip-unit($base) + unquote($unit);
+}

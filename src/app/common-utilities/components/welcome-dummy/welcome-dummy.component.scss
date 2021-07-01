@@ -1,0 +1,28 @@
+@import "../../../../assets/scss/allimports";
+
+.toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: map-get($colors, "background", "grey-light");
+
+    .angular-logo {
+        margin: map-get($spacers, 10) map-get($spacers, 0);
+    }
+}
+
+.content {
+    .highlight-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: map-get($spacers, 20);
+
+        .title {
+            font-size: toREM(24px);
+            margin: map-get($spacers, 15);
+        }
+    }
+}

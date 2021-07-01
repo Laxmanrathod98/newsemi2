@@ -1,0 +1,21 @@
+@import "../../../../assets/scss/allimports";
+
+.data {
+    max-width: toREM(900px);
+    margin-left: auto;
+    margin-right: auto;
+    .mat-grid-tile {
+        .title,
+        .data-info {
+            padding-left: toREM(50px);
+            margin-right: auto;
+            .property {
+                font-weight: 600;
+            }
+            p {
+                margin-top: map-get($spacers, 30);
+                margin-bottom: map-get($spacers, 30);
+            }
+        }
+    }
+}

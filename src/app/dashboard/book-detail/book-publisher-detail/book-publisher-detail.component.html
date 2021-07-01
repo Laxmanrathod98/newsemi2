@@ -1,0 +1,26 @@
+<div class="data">
+    <mat-grid-list cols="2" rowHeight="60vh">
+        <mat-grid-tile>
+            <div class="title">
+                <p class="property">Format:</p>
+                <p class="property">Dimensions:</p>
+                <p class="property">Publication Date:</p>
+                <p class="property">Publisher:</p>
+                <p class="property">Imprint:</p>
+                <p class="property">Publication City/Country:</p>
+                <p class="property">Language:</p>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="data-info">
+                <p>{{ format }} | {{ pages }} pages</p>
+                <p>{{ dimension }}</p>
+                <p>{{ publishDate }}</p>
+                <p>{{ publisher }}</p>
+                <p>{{ imprint }}</p>
+                <p>{{ publisherLocation }}</p>
+                <p>{{ language }}</p>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

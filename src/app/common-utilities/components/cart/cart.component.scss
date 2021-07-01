@@ -1,0 +1,92 @@
+@import "../../../../assets/scss/allimports";
+
+.main {
+    display: flex;
+
+    .heading {
+        display: flex;
+        padding: map-get($spacers, 15) map-get($spacers, 15);
+
+        .mat-icon {
+            font-size: toREM(25px);
+        }
+
+        h3 {
+            margin: map-get($spacers, 0);
+        }
+    }
+
+    .close {
+        margin-left: auto;
+        color: map-get($colors, "text", "brown-lighter");
+        padding-top: map-get($spacers, 10);
+
+        button {
+            .mat-icon {
+                font-size: toREM(15px);
+            }
+        }
+    }
+}
+
+.card {
+    padding: map-get($spacers, 15) map-get($spacers, 15);
+    display: flex;
+
+    img {
+        width: toREM(90px);
+        margin-right: map-get($spacers, 15);
+    }
+
+    .detail {
+        width: toREM(250px);
+        .format {
+            color: map-get($colors, "text", "red-light");
+            margin-bottom: map-get($spacers, 5);
+            font-size: toREM(10px);
+        }
+        .author {
+            color: map-get($colors, "text", "brown-lighter");
+            margin-bottom: map-get($spacers, 5);
+            font-size: toREM(10px);
+        }
+        p {
+            font-size: toREM(15px);
+            margin-bottom: map-get($spacers, 5);
+        }
+    }
+
+    button {
+        .mat-icon {
+            font-size: toREM(15px);
+        }
+    }
+}
+
+.bottom {
+    padding: map-get($spacers, 15);
+    width: toREM(355px);
+
+    .bottom-main {
+        margin-bottom: map-get($spacers, 15);
+    }
+
+    .total {
+        float: right;
+    }
+
+    button {
+        width: inherit;
+    }
+
+    .btn {
+        background-color: map-get($colors, "background", "black");
+        color: map-get($colors, "text", "white");
+    }
+}
+
+.error {
+    justify-content: center;
+    text-align: center;
+    color: map-get($colors, text, red-light);
+}

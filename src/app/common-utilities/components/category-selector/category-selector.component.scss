@@ -1,0 +1,38 @@
+@import "../../../../assets/scss/allimports";
+
+h3 {
+    padding-left: map-get($spacers, 15);
+}
+
+.help {
+    padding-top: map-get($spacers, 15);
+    margin: map-get($spacers, 0) map-get($spacers, 0) map-get($spacers, 5);
+}
+
+.nav-list {
+    padding-top: map-get($spacers, 0);
+
+    a {
+        font-size: toREM(15px);
+    }
+
+    mat-icon {
+        font-size: toREM(20px);
+        margin-left: auto;
+        padding-right: map-get($spacers, 5);
+    }
+}
+
+.category {
+    display: flex;
+
+    h3 {
+        padding-top: map-get($spacers, 20);
+    }
+
+    button {
+        margin-left: auto;
+        margin-right: map-get($spacers, 15);
+        margin-top: map-get($spacers, 15);
+    }
+}

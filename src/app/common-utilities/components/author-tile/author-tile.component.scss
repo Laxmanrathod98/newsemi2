@@ -1,0 +1,19 @@
+@import "../../../../assets/scss/allimports";
+
+.author-card-content {
+    height: toREM(220px);
+    width: toREM(140px);
+    text-align: center;
+    margin-top: map-get($spacers, 15);
+}
+.author-card-content:hover {
+    box-shadow: 0 toREM(4px) toREM(8px) 0 rgba(0, 0, 0, 0.2), 0 toREM(6px) toREM(20px) 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+.avatar {
+    width: toREM(120px);
+    height: toREM(120px);
+}
+.author-details {
+    margin-top: map-get($spacers, 15);
+}

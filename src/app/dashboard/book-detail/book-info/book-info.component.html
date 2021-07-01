@@ -1,0 +1,56 @@
+<div class="book-detail">
+    <mat-grid-list class="book-detail-grid" cols="7" rowHeight="60vh">
+        <mat-grid-tile colspan="3" class="image">
+            <img src="../../../assets/media/images/books/{{ bookId }}.jpg" alt="Book-cover" />
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+            <div class="detail">
+                <p class="title">
+                    <b>{{ bookTitle }}</b>
+                </p>
+                <div class="stars">
+                    <span *ngFor="let i of activeStars">
+                        <mat-icon class="active-stars mat-icon material-icons">star</mat-icon>
+                    </span>
+                    <span *ngFor="let i of inactiveStars">
+                        <mat-icon class="inactive-stars mat-icon material-icons">star</mat-icon>
+                    </span>
+                    <p class="rating">({{ rating }})</p>
+                    <p class="author"><b>By (author)</b></p>
+                    <p class="name">{{ author }}</p>
+                </div>
+                <div class="cost">
+                    <strong>$ {{ price }}</strong>
+                </div>
+                <div class="format">
+                    <p class="book-format">Book Format:</p>
+                    <p class="option">{{ format }}</p>
+                </div>
+
+                <!-- TO-DO -->
+
+                <!-- <div class="tabs">
+                    <mat-tab-group mat-align-tabs="start">
+                        <div *ngFor="let format of bookFormat">
+                            <mat-tab label="{{ format.title }} (${{ format.price }})">
+                                <p class="content">
+                                    {{ format.description }}
+                                </p>
+                            </mat-tab>
+                        </div>
+                    </mat-tab-group>
+                </div> -->
+                <div class="button-row">
+                    <button mat-stroked-button color="primary" (click)="decreaseItem()" [disabled]="!isMoreThanZero()">
+                        <mat-icon>remove</mat-icon>
+                    </button>
+                    <span class="book-items">{{ itemTotal }}</span>
+                    <button mat-stroked-button color="primary" (click)="increaseItem()">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                    <button mat-flat-button class="cart-button" (click)="addCartItem()">Add to cart</button>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

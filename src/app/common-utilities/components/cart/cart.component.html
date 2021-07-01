@@ -1,0 +1,41 @@
+<div class="main">
+    <div class="heading">
+        <mat-icon class="mat-icon">shopping_bag</mat-icon>&nbsp;&nbsp;
+        <h3>Your shopping bag ({{ itemsCount }})</h3>
+    </div>
+    <div class="close">
+        <span>Close</span>
+        <button mat-icon-button (click)="cart.toggle()"><mat-icon class="mat-icon">clear</mat-icon></button>
+    </div>
+</div>
+
+<hr />
+
+<div *ngIf="error" class="error">
+    {{ error }}
+</div>
+
+<div *ngIf="!error">
+    <div *ngFor="let item of cartItems">
+        <div class="card">
+            <img src="../../../../assets/media/images/books/{{ item.bookId }}.jpg" />
+            <div class="detail">
+                <p class="format">{{ item.format }}</p>
+                <p>{{ item.title }}</p>
+                <p class="author">{{ item.name }}</p>
+                <p>{{ item.quantity }} X ${{ item.price }}</p>
+            </div>
+            <button mat-icon-button (click)="deleteCartItem(item.cartId)"><mat-icon class="mat-icon">clear</mat-icon></button>
+        </div>
+        <hr />
+    </div>
+
+    <div class="bottom">
+        <div class="bottom-main">
+            <span>Subtotal:</span>
+            <span class="total">${{ total }}</span>
+        </div>
+        <button mat-raised-button>View Cart</button><br /><br />
+        <button class="btn" mat-raised-button>Checkout</button>
+    </div>
+</div>

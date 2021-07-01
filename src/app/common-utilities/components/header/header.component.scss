@@ -1,0 +1,34 @@
+@import "../../../../assets/scss/allimports";
+
+button {
+    margin-right: map-get($spacers, 15);
+
+    mat-icon {
+        font-size: toREM(25px);
+    }
+}
+
+.topnav {
+    display: flex;
+    overflow: hidden;
+    margin-left: map-get($spacers, 25);
+    margin-top: map-get($spacers, 10);
+
+    mat-icon {
+        font-size: toREM(30px);
+    }
+
+    a {
+        display: flex;
+        text-align: center;
+        padding: map-get($spacers, 10) map-get($spacers, 10);
+        text-decoration: none;
+        font-size: toREM(15px);
+        border-bottom: toREM(3px) solid transparent;
+    }
+
+    a:hover {
+        border-bottom: toREM(3px) solid map-get($colors, border, red-light);
+        cursor: pointer;
+    }
+}

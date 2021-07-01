@@ -1,0 +1,33 @@
+// Defines all the colors used in the project.
+// This will the central repository of all the colors to be used in the project.
+// Colors which are not defined here cannot be used.
+
+$colors: (
+    "background": (
+        "white": #fff,
+        "black": #000,
+        "red-light": #f75454,
+        "grey-light": #f6f5f3,
+        "pale-pink": #fff6f6,
+        "indigo-light": #faf1ff,
+        "ivory-light": #faf4eb,
+        "brown-light": #f4e6e5,
+        "green-light": #e6f2f4,
+        "beige-light": #fff6f6,
+    ),
+    "border": (
+        "white": #fff,
+        "black": #000,
+        "red-light": #f75454,
+        "pale-pink": #fff6f6,
+    ),
+    "text": (
+        "white": #fff,
+        "black": #000,
+        "grey": #808080,
+        "black-light": #161619,
+        "red-light": #f75454,
+        "brown-lighter": #7c6e65,
+        "golden-yellow": #ffd740,
+    ),
+);

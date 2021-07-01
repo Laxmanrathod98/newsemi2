@@ -1,0 +1,13 @@
+<div fxLayout="row wrap" fxLayoutGap="16px">
+    <div *ngFor="let item of category">
+        <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%">
+            <mat-card class="category-card" [ngStyle]="{ 'background-color': item.color_background }">
+                <mat-icon class="category-icon" [ngStyle]="{ color: item.color_icon }">{{ item.icon }}</mat-icon>
+                <mat-card-content>
+                    <p>{{ item.category_name }}</p>
+                    <p>{{ item.content }}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

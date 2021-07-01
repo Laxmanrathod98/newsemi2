@@ -1,0 +1,15 @@
+<div class="category">
+    <h3>SHOP BY CATEGORY</h3>
+    <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>clear</mat-icon></button>
+</div>
+<hr />
+<mat-nav-list class="nav-list">
+    <a mat-list-item *ngFor="let c of header.category"> {{ c }} <mat-icon>keyboard_arrow_right</mat-icon> </a>
+</mat-nav-list>
+<hr />
+<h3 class="help">HELP &amp; SETTINGS</h3>
+<mat-nav-list class="nav-list">
+    <a mat-list-item *ngFor="let setting of header.settings">
+        {{ setting }}
+    </a>
+</mat-nav-list>

@@ -1,0 +1,29 @@
+<div *ngIf="error" class="error">
+    {{ error }}
+</div>
+<div *ngIf="!error" class="detail-container">
+    <app-book-info
+        [bookTitle]="book.title"
+        [price]="book.price"
+        [bookId]="bookId"
+        [rating]="book.rating"
+        [author]="book.author"
+        [avgRating]="book.avgRating"
+        [format]="book.format"
+    ></app-book-info>
+
+    <app-book-description [synopsis]="book.synopsis" [overview]="book.overview"></app-book-description>
+
+    <hr />
+
+    <app-book-publisher-detail
+        [format]="book.format"
+        [publisher]="book.publisher"
+        [publishDate]="book.publishDate"
+        [pages]="book.pages"
+        [dimension]="book.dimension"
+        [imprint]="book.imprint"
+        [language]="book.language"
+        [publisherLocation]="book.publisherLocation"
+    ></app-book-publisher-detail>
+</div>

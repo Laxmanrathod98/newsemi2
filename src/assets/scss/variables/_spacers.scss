@@ -1,0 +1,25 @@
+@import "../functions/toREM";
+
+// The below values will be used for the space related properties like padding, margin, etc.
+// The spaces will be provided in multiples of 5.
+// only in exceptional cases values outside these can be used with justification.
+
+$spacers: (
+    0: toREM(0px, "rem"),
+    5: toREM(5px, "rem"),
+    10: toREM(10px, "rem"),
+    15: toREM(15px, "rem"),
+    20: toREM(20px, "rem"),
+    25: toREM(25px, "rem"),
+    30: toREM(30px, "rem"),
+    35: toREM(35px, "rem"),
+    40: toREM(40px, "rem"),
+    45: toREM(45px, "rem"),
+    50: toREM(50px, "rem"),
+    55: toREM(55px, "rem"),
+    60: toREM(60px, "rem"),
+    65: toREM(65px, "rem"),
+    70: toREM(70px, "rem"),
+    75: toREM(75px, "rem"),
+    80: toREM(80px, "rem"),
+);

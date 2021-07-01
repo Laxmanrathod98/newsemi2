@@ -1,0 +1,13 @@
+<div *ngIf="error" class="error">
+    {{ error }}
+</div>
+<div *ngIf="!error" class="author-list-section">
+    <div class="categories-section">
+        <div class="categories-header">
+            <span><strong>Featured Categories</strong></span>
+        </div>
+        <div class="categories-list">
+            <app-category-tiles [category]="category"></app-category-tiles>
+        </div>
+    </div>
+</div>

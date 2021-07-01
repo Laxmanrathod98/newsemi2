@@ -1,0 +1,38 @@
+@import "../../../../assets/scss/allimports";
+
+mat-card {
+    margin: map-get($spacers, 10);
+    border-radius: 0;
+    padding: map-get($spacers, 15) map-get($spacers, 20);
+
+    &:hover {
+        cursor: pointer;
+    }
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: toREM(140px);
+        }
+    }
+    .content {
+        padding-top: map-get($spacers, 10);
+        color: map-get($colors, "text", "brown-lighter");
+        font-size: toREM(15px);
+        .type {
+            color: map-get($colors, "text", "red-light");
+        }
+        .title,
+        .price {
+            font-size: toREM(15px);
+            color: map-get($colors, "text", "black-light");
+        }
+    }
+}
+
+.errorMessage {
+    justify-content: center;
+    text-align: center;
+    color: map-get($colors, text, red-light);
+}

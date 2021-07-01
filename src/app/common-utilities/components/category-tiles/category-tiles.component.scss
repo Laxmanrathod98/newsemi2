@@ -1,0 +1,9 @@
+@import "../../../../assets/scss/allimports";
+
+.category-card {
+    margin-top: map-get($spacers, 15);
+    width: toREM(135px);
+}
+.category-icon {
+    font-size: toREM(40px);
+}

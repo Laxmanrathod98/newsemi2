@@ -1,0 +1,14 @@
+<div *ngIf="error" class="errorMessage">
+    {{ error }}
+</div>
+<mat-card class="book-card" (click)="onBookSelection()">
+    <div class="image"><img src="../../../../assets/media/images/books/{{ book.bookId }}.jpg" /></div>
+    <mat-card-content>
+        <div class="content">
+            <div class="type">{{ book.format }}</div>
+            <div class="title">{{ book.title }}</div>
+            <div class="author">{{ AuthorData.name }}</div>
+            <div class="price">{{ book.price }}</div>
+        </div>
+    </mat-card-content>
+</mat-card>

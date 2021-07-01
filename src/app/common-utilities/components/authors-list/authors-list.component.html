@@ -1,0 +1,14 @@
+<div *ngIf="error" class="error">
+    {{ error }}
+</div>
+<div *ngIf="!error" class="author-list-section">
+    <div class="authors-header">
+        <span><strong>Favourite Authors</strong></span>
+    </div>
+    <div class="authors-list">
+        <div *ngFor="let author of pageSlice">
+            <app-author-tile [author]="author"></app-author-tile>
+        </div>
+    </div>
+    <mat-paginator [length]="authorsData.length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChange($event)"> </mat-paginator>
+</div>

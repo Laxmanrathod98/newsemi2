@@ -1,0 +1,37 @@
+<div class="login-section">
+    <div class="login-logo">
+        <img src="../../../../assets/media/images/logo.svg" alt="Book Store" />
+    </div>
+    <div class="login-form">
+        <form [formGroup]="login" (ngSubmit)="onSubmit()">
+            <div class="login-username">
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input type="text" matInput formControlName="username" required />
+
+                    <mat-error *ngIf="login.get('username')?.errors?.required">
+                        {{ requiredError }}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="login-password">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password" required />
+
+                    <mat-error *ngIf="login.get('password')?.errors?.minlength">
+                        {{ lengthValidatorError }}
+                    </mat-error>
+                    <mat-error *ngIf="login.get('password')?.errors?.required">
+                        {{ requiredError }}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="login-submit">
+                <button mat-flat-button>Sign in</button>
+            </div>
+        </form>
+    </div>
+</div>
