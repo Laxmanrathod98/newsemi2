@@ -61,7 +61,7 @@ export class BookStoreCommonService {
      * @returns Authors data from backend
      */
     getAuthorsData(): Observable<Author[]> {
-        return this.httpClient.get<any>(`/api/author`);
+        return this.httpClient.get<any>(`http://localhost:5000/api/author`);
     }
 
     /**

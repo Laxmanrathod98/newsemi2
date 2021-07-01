@@ -3,6 +3,7 @@
 mat-card {
     margin: map-get($spacers, 10);
     border-radius: 0;
+    margin-left: 50px;
     padding: map-get($spacers, 15) map-get($spacers, 20);
 
     &:hover {
